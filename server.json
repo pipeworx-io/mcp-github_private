@@ -3,7 +3,7 @@
   "name": "io.github.pipeworx-io/github_private",
   "title": "Github_private",
   "description": "GitHub Private MCP Pack — access private repos, org data via OAuth.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "websiteUrl": "https://pipeworx.io/packs/github_private",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-github_private",

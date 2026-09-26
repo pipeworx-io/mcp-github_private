@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-github_private",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "GitHub Private MCP Pack — access private repos, org data via OAuth.",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-c03c20200d8fc37a289f113c63973745112ef8ee4aea6fc8317609bef52bedb6",
-    "sourceCommit": "76aa8f5d9b5dc2f665563030647c68e661478864"
+    "sourceHash": "v1-68bff3a17ca1ffbc0d84390a6ee1abea15f61cefea4331a1386ddeafd4fe97a9",
+    "sourceCommit": "91681e9a4a137fa0051d58e32f38c64b6334af5c"
   }
 }
