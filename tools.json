@@ -1,0 +1,140 @@
+[
+  {
+    "name": "gh_list_repos",
+    "description": "List all your repositories including private ones. Returns repo names, URLs, descriptions, language, stars, and last update time.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "visibility": {
+          "type": "string",
+          "description": "Filter: all, public, private (default: all)"
+        },
+        "sort": {
+          "type": "string",
+          "description": "Sort by: created, updated, pushed, full_name"
+        },
+        "per_page": {
+          "type": "number",
+          "description": "Results per page (max 100)"
+        }
+      }
+    }
+  },
+  {
+    "name": "gh_get_repo",
+    "description": "Get detailed info for a specific repository. Returns description, language, stars, forks, open issues, default branch, and access level.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "type": "string",
+          "description": "Repository owner"
+        },
+        "repo": {
+          "type": "string",
+          "description": "Repository name"
+        }
+      },
+      "required": [
+        "owner",
+        "repo"
+      ]
+    }
+  },
+  {
+    "name": "gh_list_issues",
+    "description": "List issues in a repository. Specify owner and repo name (e.g., owner='octocat', repo='Hello-World'). Returns titles, numbers, status, assignees, and labels.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "type": "string",
+          "description": "Repository owner"
+        },
+        "repo": {
+          "type": "string",
+          "description": "Repository name"
+        },
+        "state": {
+          "type": "string",
+          "description": "Filter: open, closed, all (default: open)"
+        },
+        "per_page": {
+          "type": "number",
+          "description": "Results per page (max 100)"
+        }
+      },
+      "required": [
+        "owner",
+        "repo"
+      ]
+    }
+  },
+  {
+    "name": "gh_list_pulls",
+    "description": "List pull requests in a repository. Specify owner and repo name (e.g., owner='octocat', repo='Hello-World'). Returns titles, numbers, status, reviewers, and merge state.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "type": "string",
+          "description": "Repository owner"
+        },
+        "repo": {
+          "type": "string",
+          "description": "Repository name"
+        },
+        "state": {
+          "type": "string",
+          "description": "Filter: open, closed, all (default: open)"
+        },
+        "per_page": {
+          "type": "number",
+          "description": "Results per page (max 100)"
+        }
+      },
+      "required": [
+        "owner",
+        "repo"
+      ]
+    }
+  },
+  {
+    "name": "gh_list_orgs",
+    "description": "List organizations you're a member of. Returns org names, URLs, and your role (owner, member, etc.).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    }
+  },
+  {
+    "name": "gh_get_file",
+    "description": "Get file contents from a repository. Specify owner, repo name, and file path (e.g., 'README.md'). Returns raw content and metadata.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "type": "string",
+          "description": "Repository owner"
+        },
+        "repo": {
+          "type": "string",
+          "description": "Repository name"
+        },
+        "path": {
+          "type": "string",
+          "description": "File path (e.g., \"src/index.ts\")"
+        },
+        "ref": {
+          "type": "string",
+          "description": "Branch or commit SHA (default: default branch)"
+        }
+      },
+      "required": [
+        "owner",
+        "repo",
+        "path"
+      ]
+    }
+  }
+]
